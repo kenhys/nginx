@@ -9,7 +9,9 @@
 #define _NGX_WIN32_CONFIG_H_INCLUDED_
 
 
+#ifndef WIN32
 #define WIN32         0x0400
+#endif
 #define _WIN32_WINNT  0x0501
 
 
