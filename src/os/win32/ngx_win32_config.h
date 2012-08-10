@@ -127,8 +127,12 @@ typedef unsigned short int  uint16_t;
 
 typedef __int64             int64_t;
 typedef unsigned __int64    uint64_t;
+#ifndef _INTPTR_T_DEFINED
 typedef int                 intptr_t;
+#endif
+#ifndef _UINTPTR_T_DEFINED
 typedef u_int               uintptr_t;
+#endif
 
 /* Windows defines off_t as long, which is 32-bit */
 typedef __int64             off_t;
