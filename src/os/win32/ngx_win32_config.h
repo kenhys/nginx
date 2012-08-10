@@ -142,7 +142,9 @@ typedef __int64             off_t;
 #define _OFF_T_DEFINED
 #endif
 
+#ifndef _SSIZE_T_DEFINED
 typedef int                 ssize_t;
+#endif
 typedef uint32_t            in_addr_t;
 typedef u_short             in_port_t;
 typedef int                 sig_atomic_t;
