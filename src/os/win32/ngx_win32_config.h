@@ -135,8 +135,12 @@ typedef u_int               uintptr_t;
 #endif
 
 /* Windows defines off_t as long, which is 32-bit */
+#if defined( __MINGW32__ ) && defined( _WIN64 )
+#define _FILE_OFFSET_BITS 64
+#else
 typedef __int64             off_t;
 #define _OFF_T_DEFINED
+#endif
 
 typedef int                 ssize_t;
 typedef uint32_t            in_addr_t;
